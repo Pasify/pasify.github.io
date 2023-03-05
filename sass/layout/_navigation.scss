@@ -1,0 +1,228 @@
+.nav{
+    // outline: 1px solid white;
+    height: 7rem;
+    align-content: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5rem;
+    width: 100%;
+    z-index: 5;
+
+    &__check-box{
+        display: none;
+    }
+    &__button{
+        z-index: 7;
+        // @include glass;
+    }
+    @include respond(phone2){
+        z-index: 5;
+        position: fixed;
+        top: 0;
+        right: 0; 
+        &__button{
+            height: 4rem;
+            width: 4rem;
+            position: fixed;
+            top: 3rem;
+            right: 4rem;
+            border-radius: 1rem;
+            // outline: 2px solid red;
+            cursor: pointer;
+        }
+
+        
+        &__icon{
+            height: .4rem;
+            width: 4rem;
+            position: relative;
+            top: 1.5rem;
+            transition: all .3s ease;
+            // outline: 2px solid white;
+            
+            
+           
+            &,&::before,&::after{
+                background-color: $color-1;
+                display: inline-block;
+            }
+            &::before,&::after{
+                content: " ";
+                height: .4rem;
+                width: 3rem;
+                right: .5rem;
+                transition: all .3s ease;
+                // background-color: rgb(21, 255, 0);
+
+               
+            }
+            &::before{
+                position: absolute;
+                top: -1.2rem;
+            }
+            &::after{
+                position: absolute;
+                top: 1.2rem;
+            }
+
+            &:hover{
+                &::before{
+                    top: -.8rem;
+                }
+                &::after{
+                    top: .8rem;
+                }
+            }
+            &:active{
+                color: transparent;
+            }
+        }
+        &{
+            /* controls the main nav (main background)
+            expected values:
+            height:100vh;
+            width: 65%;
+            */
+            
+            //  width:100%;
+             height: 0;
+            //  justify-content: flex-end;
+            // display: none;
+        }
+    }
+    
+    &__navigation{
+        // outline: 2px solid yellow;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 1.7rem;
+        transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        @include respond(phone2){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // opacity: 0;
+
+            /*controls the unordered list::
+            expected value
+             width: 100%;
+            */
+             height: 0;
+            width: 0;
+               background-color: $navy1;
+              
+               backdrop-filter: blur(100px);
+               box-shadow: $box-shadow;
+               border: 2px solid rgba(255,255,255,0.18); 
+            // @include glass;
+            // z-index: 10;
+            position: absolute;
+            right: 0;
+
+           
+            // visibility: hidden;
+            
+        }
+        @include respond(phone2){
+        height: 0;
+        width: 0;
+        }
+        
+    }
+
+    &__list{
+        font-family: monospace;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: 3rem;
+        // outline: 2px solid blue;
+        margin-right: 2rem;
+        transition: all 0.2s cubic-bezier(0.25, 0.1, 0.2, 1.05);
+       
+        @include respond(phone2){
+            /*controls the li:
+            width: 100%;*/
+            width: 0%;
+            overflow: hidden;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+
+            // outline: 2px solid green;
+            padding: 2rem 0;
+            // visibility: hidden;
+            
+        }
+        @include respond(phone2){
+            // display: none;
+        }
+    }
+    &__item{
+        transition: all .2s ease-in;
+        &--num{
+            margin-right: .7rem;
+            text-transform: none;
+            color: $color-1;
+        }
+       &:hover{
+            transform: scale(1.1,1.1);
+       }
+        @include respond(phone2){
+           
+              background-image: linear-gradient(120deg, transparent 0%,
+            transparent 50%,
+            $navy-blue 50%);
+            padding: 1rem 4rem;
+            background-size: 220%;
+            transition: all .2s ease-in;
+            
+
+            &:hover{
+                background-position: 100%;
+                transform: translateX(1.2rem) scale(1.2,1.2);
+                
+            }
+        }  
+    }
+    &__link{
+        transition: all .2s ease;
+         &:hover{
+            color: $color-1;
+        }
+        color: $slate-color-2;
+        text-decoration: none;
+        @include respond(phone2){
+            display: block;
+        }
+    }
+
+    &__check-box:checked~&__navigation{
+        height:100vh;
+        width: 65%;
+    }
+    &__check-box:checked~&__navigation>&__list{
+        width: 100%;
+    }
+    &__check-box:checked + &__button > &__icon{
+       background-color: transparent;
+            
+    }
+    &__check-box:checked + &__button > &__icon::before{
+        top: 0;
+        transform: rotate(-135deg);
+
+    }
+    &__check-box:checked + &__button > &__icon::after{
+       top: 0;
+        transform: rotate(135deg);
+    }
+}
+.sticky{
+    position: fixed;
+    @include glass;
+}

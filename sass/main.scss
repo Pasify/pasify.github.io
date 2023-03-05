@@ -1,0 +1,30 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/description";
+
+
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/exp";
+@import "layout/_works";
+@import "layout/social__contact";
+@import "layout/gmail";
+@import "layout/contact";
+@import "layout/project_sub";
+@import "layout/footer";
+
+@import "pages/home";
+
+
+
+
+
+

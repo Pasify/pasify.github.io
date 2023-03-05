@@ -1,0 +1,75 @@
+.social__contacts{
+    
+    position:fixed;
+    bottom: 0;
+    left: 5%;
+    padding: 0 1rem;
+  
+    @include respond(phone2){
+        position: static;
+         padding: 2rem;
+        //  background-color: $navy-blue
+    }
+    .icon__container{
+        // outline: 2px solid yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        @include respond(phone2){
+        // position: static;
+        // display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        height: 9rem;
+        @include glass;
+        // background-color: aqua;
+      
+        }
+        .whatsapp-icon{
+            color: $slate-color-3;
+            text-decoration: none;
+            
+            .icofont-brand-whatsapp{
+                font-size:2.7rem;
+            color: currentcolor;
+            text-align: center;
+            
+        }
+        }
+        
+        .icon{
+            width: 2rem;    
+            fill: $slate-color-3;
+            height: 2rem;
+            transition: all .2s ease-in;
+            @include respond(phone2){
+                //    width: 2rem;  
+                //    height: 2rem;
+                   transform: scale(1.5);
+            }
+            &:hover{
+                fill: $color-1;
+                transform: scale(1.5, 1.5) translateY(-3px);
+                height: 2rem;
+                @include respond(phone){
+                    transform: scale(2) translateY(-3px);
+                }
+            }
+        }
+        &::after{
+            content: "";
+            // display: inline-block;
+            height: 10rem;
+            width: .3rem;
+            background: $slate-color-3;
+            @include respond(phone2){
+                display: none;
+            }
+        }
+    }
+}
