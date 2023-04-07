@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap");
 /*
 
 media query manger
@@ -25,22 +26,22 @@ big-desktop
 html {
   font-size: 62.5%;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   html {
     font-size: 50%;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   html {
     font-weight: 43.75%;
   }
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   html {
     font-size: 37.5%;
   }
 }
-@media (min-width: 112.5em) {
+@media only screen and (min-width: 112.5em) {
   html {
     font-size: 75%;
   }
@@ -53,8 +54,8 @@ html::selection {
 body {
   background-image: linear-gradient(120deg, rgba(10, 25, 47, 0.93), rgba(10, 25, 47, 0.93)), url(../../images/wavybg.jpg);
   background-size: contain;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   line-height: 1.5;
   box-sizing: border-box;
   position: relative;
@@ -77,12 +78,12 @@ main {
   width: 90vw;
   padding: 0 10rem;
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   main {
     padding: 0 2rem;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   main {
     padding: 0 2rem;
   }
@@ -94,12 +95,22 @@ main {
     box-shadow: none;
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
   }
   100% {
     transform: scale(1);
     box-shadow: none;
+  }
+}
+@keyframes appear {
+  from {
+    transform: scale(0.2);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 .heading {
@@ -138,7 +149,7 @@ main {
   display: none;
 }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .overlay {
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
@@ -172,7 +183,8 @@ main {
   height: 30rem;
   background: linear-gradient(135deg, rgba(9, 5, 5, 0.2), rgba(255, 255, 255, 0));
   backdrop-filter: blur(45px);
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  -webkit-backdrop-filter: blur(45px);
+  box-shadow: 0 10px 30px -15px rgba(16, 44, 87, 0.7);
   border: 2px solid rgba(255, 255, 255, 0.18);
   color: #ccd6f6;
   border-radius: 10px;
@@ -192,7 +204,7 @@ main {
 }
 
 .btn, .btn:link {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   background-color: transparent;
   color: #f765e6;
   outline: 2px solid rgba(247, 101, 230, 0.5);
@@ -221,7 +233,7 @@ main {
 }
 
 .button {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
 }
 .button, .button:link, .button:visited {
   font-size: 1.2rem;
@@ -239,7 +251,7 @@ main {
   justify-content: flex-start;
   align-self: center;
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .button, .button:link, .button:visited {
     padding: 1rem;
   }
@@ -255,6 +267,7 @@ main {
   text-transform: capitalize;
   color: #ccd6f6;
   font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 .job__description h3 .company {
   color: #f765e6;
@@ -267,19 +280,25 @@ main {
   color: #8892b0;
   font-size: 1.5rem;
   text-transform: capitalize;
+  margin-bottom: 0.5rem;
 }
 .job__description .description-details ul {
   color: #8892b0;
-  font-size: 2rem;
-  outline: 2px solid red;
+  font-size: 1.8rem;
 }
 .job__description .description-details ul li {
-  padding-bottom: 1rem;
+  display: flex;
+  padding-bottom: 0.5rem;
 }
-.job__description .description-details ul li::marker {
+.job__description .description-details ul li::before {
   content: "▹";
   color: #f765e6;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  gap: 2.5rem;
+}
+.job__description .description-details ul li a {
+  display: contents;
+  color: #9754cb;
 }
 
 .nav {
@@ -298,7 +317,7 @@ main {
 .nav__button {
   z-index: 7;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .nav {
     z-index: 5;
     position: fixed;
@@ -365,7 +384,7 @@ main {
   font-size: 1.7rem;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .nav__navigation {
     display: flex;
     flex-direction: column;
@@ -379,19 +398,21 @@ main {
     width: 0;
     background-color: rgb(10, 25, 47);
     backdrop-filter: blur(100px);
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    box-shadow: 0 10px 30px -15px rgba(16, 44, 87, 0.7);
     border: 2px solid rgba(255, 255, 255, 0.18);
     position: absolute;
     right: 0;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .nav__navigation {
     height: 0;
     width: 0;
   }
 }
 .nav__list {
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth;
   font-family: monospace;
   display: flex;
   list-style: none;
@@ -400,7 +421,7 @@ main {
   margin-right: 2rem;
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.2, 1.05);
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .nav__list {
     /*controls the li:
     width: 100%;*/
@@ -424,7 +445,7 @@ main {
 .nav__item:hover {
   transform: scale(1.1, 1.1);
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .nav__item {
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #233554 50%);
     padding: 1rem 4rem;
@@ -444,7 +465,7 @@ main {
 .nav__link:hover {
   color: #f765e6;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .nav__link {
     display: block;
   }
@@ -472,7 +493,8 @@ main {
   position: fixed;
   background: linear-gradient(135deg, rgba(9, 5, 5, 0.2), rgba(255, 255, 255, 0));
   backdrop-filter: blur(45px);
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  -webkit-backdrop-filter: blur(45px);
+  box-shadow: 0 10px 30px -15px rgba(16, 44, 87, 0.7);
   border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -484,7 +506,7 @@ main {
   padding: 2rem 0;
   margin-bottom: 5rem;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .header {
     height: 100vh;
   }
@@ -492,28 +514,28 @@ main {
 .header__container {
   align-items: start;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .header__container {
     font-size: 2rem;
   }
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .header__container {
     font-size: 2rem;
   }
 }
 .header__hi {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   font-weight: 200;
   color: #f765e6;
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .header__hi {
     font-size: 2.5rem;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .header__hi {
     font-size: 2.4rem;
   }
@@ -526,12 +548,17 @@ main {
   background-clip: text;
   color: transparent;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 75em) {
+  .header__name {
+    font-size: 6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
   .header__name {
     font-size: 5.7rem;
   }
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .header__name {
     font-size: 5rem;
   }
@@ -541,34 +568,39 @@ main {
   color: #8892b0;
   margin-top: -2rem;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 75em) {
+  .header__sub {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
   .header__sub {
     font-size: 4.5rem;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .header__sub {
     font-size: 4rem;
   }
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .header__sub {
     font-size: 4rem;
   }
 }
 .header__description {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #8892b0;
   width: 65%;
   font-weight: 100;
   line-height: 1.5;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .header__description {
     font-size: 2rem;
   }
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .header__description {
     font-size: 2.5rem;
   }
@@ -586,10 +618,11 @@ main {
 }
 .exp .h2b {
   display: flex;
+  align-items: center;
   position: relative;
 }
 .exp .h2b::before {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   content: "02.";
   font-size: 2rem;
   color: #f765e6;
@@ -600,7 +633,7 @@ main {
   flex-direction: row;
   gap: 2rem;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .exp__inside {
     display: flex;
     flex-direction: column;
@@ -626,7 +659,7 @@ main {
   border-radius: 1rem;
   box-shadow: 0 -100vh 0 100vh rgb(10, 25, 47);
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .exp__inside .job-tabs {
     width: 100%;
     display: flex;
@@ -637,7 +670,8 @@ main {
     border-bottom: 2px solid #8892b0;
     background: linear-gradient(135deg, rgba(9, 5, 5, 0.2), rgba(255, 255, 255, 0));
     backdrop-filter: blur(45px);
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    -webkit-backdrop-filter: blur(45px);
+    box-shadow: 0 10px 30px -15px rgba(16, 44, 87, 0.7);
     border: 2px solid rgba(255, 255, 255, 0.18);
     gap: 2rem;
   }
@@ -653,13 +687,13 @@ main {
   border-left: 2px solid #f765e6;
   color: #f765e6;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .exp__inside .job-tabs .button__tab:focus {
     border-left: none;
     border-bottom: 2px solid #f765e6;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .exp__inside .job-tabs .button__tab {
     text-align: center;
     font-size: 1.7rem;
@@ -672,9 +706,9 @@ main {
   width: 100%;
 }
 .exp__inside .job__description .duration {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .exp__inside .job__description .description-details > ul {
     font-size: 2rem;
   }
@@ -691,6 +725,7 @@ main {
 
 .describe--active {
   display: block;
+  animation: appear 0.3s ease-in;
 }
 
 .works .tools .icon-link, .works .tools .git-link {
@@ -712,7 +747,7 @@ main {
   gap: 2rem;
 }
 .works h2::before {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   content: "03.";
   font-size: 2rem;
   color: #f765e6;
@@ -727,7 +762,7 @@ main {
   color: #ccd6f6;
   text-decoration: none;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .works .project-title {
     grid-row: 1/-1;
     text-align: start;
@@ -755,7 +790,7 @@ main {
   align-content: center;
   color: #ccd6f6;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .works .project__container .project__description {
     grid-row: 2/3;
     grid-column: 1/-1;
@@ -770,7 +805,7 @@ main {
   gap: 1.5rem;
   align-items: end;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .works .tools {
     justify-self: start;
   }
@@ -780,10 +815,10 @@ main {
   display: flex;
   gap: 2rem;
   color: #8892b0;
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   justify-content: flex-end;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .works .tools .work__links {
     display: flex;
     justify-content: start;
@@ -791,7 +826,7 @@ main {
 }
 .works .work__container {
   outline: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: rgba(2, 12, 27, 0.7);
+  box-shadow: rgba(16, 44, 87, 0.7);
   background-image: linear-gradient(to right, rgba(151, 84, 203, 0.5), rgba(151, 84, 203, 0.5));
   background-position: center;
   background-repeat: no-repeat;
@@ -837,10 +872,10 @@ main {
 .social__contacts {
   position: fixed;
   bottom: 0;
-  left: 5%;
+  left: 5em;
   padding: 0 1rem;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .social__contacts {
     position: static;
     padding: 2rem;
@@ -853,7 +888,7 @@ main {
   align-items: center;
   gap: 2rem;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .social__contacts .icon__container {
     flex-direction: row;
     border-radius: 5px;
@@ -863,7 +898,8 @@ main {
     height: 9rem;
     background: linear-gradient(135deg, rgba(9, 5, 5, 0.2), rgba(255, 255, 255, 0));
     backdrop-filter: blur(45px);
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    -webkit-backdrop-filter: blur(45px);
+    box-shadow: 0 10px 30px -15px rgba(16, 44, 87, 0.7);
     border: 2px solid rgba(255, 255, 255, 0.18);
   }
 }
@@ -882,7 +918,7 @@ main {
   height: 2rem;
   transition: all 0.2s ease-in;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .social__contacts .icon__container .icon {
     transform: scale(1.5);
   }
@@ -892,7 +928,7 @@ main {
   transform: scale(1.5, 1.5) translateY(-3px);
   height: 2rem;
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .social__contacts .icon__container .icon:hover {
     transform: scale(2) translateY(-3px);
   }
@@ -903,7 +939,7 @@ main {
   width: 0.3rem;
   background: #8892b0;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .social__contacts .icon__container::after {
     display: none;
   }
@@ -911,27 +947,41 @@ main {
 
 .gmail__container {
   padding: 0 1rem;
-  text-align: center;
+  display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
   position: fixed;
-  bottom: 25%;
-  right: -5%;
+  bottom: 16rem;
+  right: -5rem;
+  transform: rotate(90deg);
 }
-.gmail__container .gmail__address {
+.gmail__container::after {
+  content: "";
+  display: inline-block;
+  height: 10rem;
+  width: 0.3rem;
+  background: #8892b0;
   transform: rotate(90deg);
   position: relative;
+  top: 0rem;
+  left: 7rem;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
+  .gmail__container::after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 37.5em) {
   .gmail__container .gmail__address {
     display: none;
   }
 }
 .gmail__container .gmail__address > a {
+  transition: all 0.2s ease-in;
   color: #ccd6f6;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-family: monospace;
+  font-size: 1.2rem;
+  font-family: "Fira Code", monospace;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -941,20 +991,29 @@ main {
 }
 .gmail__container .gmail__address > a:hover {
   cursor: pointer;
+  color: #f765e6;
+  transform: scale(1.2);
 }
-.gmail__container .gmail__address > a::after {
-  content: "";
-  height: 10rem;
-  width: 0.3rem;
-  background: #8892b0;
-  transform: rotate(90deg);
+
+.contact .cta .email-link .btn__visible, .contact .cta .email-link .btn__invisible, .contact .cta .call-link .btn__visible, .contact .cta .call-link .btn__invisible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.contact .cta .email-link, .contact .cta .call-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .cta .email-link .btn__invisible, .contact .cta .call-link .btn__invisible {
   position: absolute;
-  right: -30%;
-}
-@media (max-width: 37.5em) {
-  .gmail__container .gmail__address > a::after {
-    display: none;
-  }
+  left: 0;
+  top: -100%;
 }
 
 .contact {
@@ -963,6 +1022,8 @@ main {
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 4rem;
 }
 .contact__heading h3 {
@@ -971,7 +1032,7 @@ main {
   font-family: monospace;
 }
 .contact__heading h3::before {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   content: "04.";
   font-size: 2rem;
   color: #f765e6;
@@ -983,13 +1044,14 @@ main {
 }
 .contact .cta {
   display: flex;
-  gap: 3rem;
   justify-content: center;
+  align-items: center;
+  gap: 4rem;
 }
 .contact .cta:hover {
   cursor: pointer;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .contact .cta {
     flex-direction: column;
   }
@@ -1002,6 +1064,24 @@ main {
   font-size: 2rem;
   color: #ccd6f6;
 }
+.contact .cta .call-link:hover .btn__invisible {
+  top: 0;
+}
+.contact .cta .call-link:hover .btn__visible {
+  transform: translateY(-100%);
+}
+.contact .cta .call-link:hover {
+  animation: pulse 1s infinite;
+}
+.contact .cta .email-link:hover .btn__invisible {
+  top: 0;
+}
+.contact .cta .email-link:hover .btn__visible {
+  transform: translateY(-100%);
+}
+.contact .cta .email-link:hover {
+  animation: pulse 1s infinite;
+}
 
 .project_sub {
   padding: 5rem 0;
@@ -1010,7 +1090,7 @@ main {
 .project_sub h3 {
   color: #ccd6f6;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .project_sub h3 {
     text-align: center;
   }
@@ -1029,7 +1109,8 @@ main {
   border-radius: 10px;
   background: linear-gradient(135deg, rgba(9, 5, 5, 0.2), rgba(255, 255, 255, 0));
   backdrop-filter: blur(45px);
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  -webkit-backdrop-filter: blur(45px);
+  box-shadow: 0 10px 30px -15px rgba(16, 44, 87, 0.7);
   border: 2px solid rgba(255, 255, 255, 0.18);
   padding: 3rem;
   gap: 2rem;
@@ -1060,15 +1141,15 @@ main {
 .project_sub .project__sub__container .project .project__tools {
   color: #8892b0;
   font-size: 1.5rem;
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
 }
 
 .footer {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   padding: 2rem 0;
   color: #ccd6f6;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .about {
@@ -1080,9 +1161,10 @@ main {
   width: 50%;
   display: flex;
   position: relative;
+  align-items: center;
 }
 .about__heading::before {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   content: "01.";
   font-size: 2rem;
   color: #f765e6;
@@ -1091,26 +1173,26 @@ main {
 .about__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  column-gap: 3rem;
+  gap: 3rem;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .about__container {
     row-gap: 4rem;
   }
 }
 .about__description {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #8892b0;
   display: grid;
   grid-template-rows: repeat(4, max-content);
   row-gap: 1.5rem;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .about__description {
     font-size: 2rem;
   }
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .about__description {
     grid-column: 1/-1;
     font-size: 2.3rem;
@@ -1122,7 +1204,7 @@ main {
   }
 }
 .about__description .list {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   list-style: none;
   text-transform: capitalize;
   display: flex;
@@ -1148,9 +1230,10 @@ main {
   transition: all 0.2s ease;
   background-position: center;
   justify-self: center;
+  border-radius: 5px;
   outline: 2px solid #f765e6;
 }
-@media (max-width: 25em) {
+@media only screen and (max-width: 25em) {
   .about__img-div {
     justify-content: center;
   }
@@ -1159,12 +1242,13 @@ main {
   content: "";
   width: 100%;
   height: 100%;
-  outline: 3px solid #f765e6;
+  outline: 2px solid #f765e6;
   position: absolute;
   top: 2.5rem;
   left: 3rem;
   z-index: -1;
   transition: all 0.2s ease-in-out;
+  border-radius: 5px;
   background-color: #28104e;
 }
 .about__img-div:hover {

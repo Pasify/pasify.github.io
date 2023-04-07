@@ -134,6 +134,8 @@
     }
 
     &__list{
+        -webkit-scroll-behavior: smooth;
+        scroll-behavior: smooth;
         font-family: monospace;
         display: flex;
         list-style: none;

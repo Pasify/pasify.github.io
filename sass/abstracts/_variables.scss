@@ -36,7 +36,7 @@ $black-color2: rgb(19, 15, 22);
 // lighter-variation
 $color-1-light: rgba(222, 172, 245, 0.25);
 
-$shadow: rgba(2, 12, 27, 0.7);
+$shadow: rgba(16, 44, 87, 0.7);
 $box-shadow: 0 10px 30px -15px $shadow;
 
 $headingNum1: 1;
@@ -46,4 +46,7 @@ $headingNum2: 3;
 $radius: 10px;
 
 //font variables
-$font-secondary: monospace;
+$font-secondary: 'Fira Code', monospace;
+$font-primary:'Poppins', sans-serif;
+//// font-family: 'Fira Code', monospace;
+//font-family: 'Poppins', sans-serif;

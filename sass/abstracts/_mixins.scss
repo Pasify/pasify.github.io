@@ -30,6 +30,7 @@
     // background:linear-gradient(135deg, darken($navy1, 1%),rgba(255,255,255,0));
     background:linear-gradient(135deg, rgba(9, 5, 5, 0.2), rgba(255,255,255,0));
     backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(45px);
     box-shadow: $box-shadow;
     border: 2px solid rgba(255,255,255,0.18); 
 }
@@ -52,20 +53,20 @@ big-desktop
 */
 @mixin respond($breakpoint) {
     @if $breakpoint==phone {
-        @media(max-width: 25em){ @content;} //400px
+        @media only screen and (max-width: 25em){ @content;} //400px 
     }
     @if $breakpoint==phone2 {
-        @media(max-width: 37.5em){ @content;} //600px
+        @media only screen and (max-width: 37.5em){ @content;} //600px
     }
     @if $breakpoint==tab-port {
-        @media(max-width: 56.25em){ @content;} //900px
+        @media only screen and (max-width: 56.25em){ @content;} //900px
     }
     @if $breakpoint==desktop {
-     @media(max-width: 75em){ @content;} //1200px
+     @media only screen and (max-width: 75em){ @content;} //1200px
     }
 
     @if $breakpoint==big-desktop {
-     @media(min-width: 112.5em){ @content;} //1800px
+     @media only screen and (min-width: 112.5em){ @content;} //1800px
     }
 }
 

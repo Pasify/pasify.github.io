@@ -18,11 +18,10 @@
      }
 
     &__container{
-        // display: grid;
-        // grid-template-rows: repeat(3, max-content) min-content 5rem;
-       
-        
         align-items: start;
+        @include respond(desktop){
+
+        }
          @include respond(tab-land){
             height: 100%;
             align-content: center;
@@ -35,11 +34,11 @@
         }
     }
     &__hi{
-        font-size: 2.6rem;
+        font-size: 2.5rem;
         font-weight: 200;
         color: $color-1;
         // word-spacing: 5px;
-        font-family: monospace;
+        font-family: $font-secondary;
 
         // @include respond(tab-land){
         //     font-size: 3rem;
@@ -54,13 +53,15 @@
     }
     &__name{
         font-size: 8.5rem;
-        
         // color: $slate-color-2;
         background-image: linear-gradient(to right, $slate-color-3, $slate-color-2);
         display: inline-block;
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        @include respond(desktop){
+            font-size: 6rem;
+        }
         @include respond(phone2){
             font-size: 5.7rem;
         }
@@ -73,6 +74,9 @@
         font-size: 7rem;
         color: $slate-color-3;
         margin-top: -2rem;
+        @include respond(desktop){
+            font-size: 5rem;
+        }
          @include respond(tab-port){
             font-size: 4.5rem;
          }
@@ -85,7 +89,8 @@
     }
     &__description{
         // outline: 2px solid yellow;
-        font-size: 3rem;
+        // font-size: 3rem; //30px
+        font-size: 2.5rem; //30px
         color: $slate-color-3;
         width: 65%;
         font-weight: 100;

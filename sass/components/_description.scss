@@ -3,12 +3,14 @@
         text-transform: capitalize;
         color: $slate-color-2;
         font-size: 2rem;
+        margin-bottom: .5rem;
         .company{
         color: $color-1;
         }
         a{
         text-decoration:none;
         color: $color-1;
+
         
         }
     }
@@ -16,26 +18,31 @@
         color: $slate-color-3;
         font-size: 1.5rem;
         text-transform: capitalize;
+        margin-bottom: .5rem;
     }
     .description-details{
         
         ul{
             // list-style: none;
             color: $slate-color-3;
-            font-size: 2rem;
+            font-size: 1.8rem;
             // list-style: none;
-            outline: 2px solid red;
+            // outline: 2px solid red;
             
             li{
-            
-                padding-bottom: 1rem;
-                &::marker{
+                display: flex;
+                padding-bottom: .5rem;  
+               
+                &::before{
                 content: "▹";
                 color: $color-1 ;
-                font-size:2.5rem;
-                
+                font-size:2rem;
+                gap: 2.5rem;
                 }
-
+                a{
+                    display: contents;
+                    color: $color-2;
+                }
             }
         }
     }

@@ -8,6 +8,7 @@
 
     .h2b{
         display: flex;
+        align-items: center;
         position: relative;
         &::before{
            @include beforeEl("02.")
@@ -99,7 +100,7 @@
         width: 100%;
         .h3{}
         .duration{
-            font-family: monospace;
+            font-family: $font-secondary;
         }
         .description-details>ul{
             @include respond(phone2){
@@ -112,16 +113,20 @@
 
 .works{
     height: 50vh;
-    // outline:2px solid white;
+    
     padding: 10rem 0;
 }
-// .describe--inactive{
-//     display:none;
-// }
+
 .describe{
     display: none;
+   
+   
 }
 .describe--active{
    
     display: block;
+    animation: appear .3s ease-in ;
+    // animation-iteration-count: 3;
+    
+   
 }
