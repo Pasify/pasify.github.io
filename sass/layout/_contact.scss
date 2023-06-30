@@ -1,110 +1,112 @@
-%switch{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    height: 100%;
-    width: 100%;
-    @include trans2sec;
+%switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  @include trans2sec;
 }
-%hide{
-     position: relative;
-    overflow: hidden;
+%hide {
+  position: relative;
+  overflow: hidden;
 }
-%invisible{
-    position: absolute;
-    left: 0;
-    top: -100%;
+%invisible {
+  position: absolute;
+  left: 0;
+  top: -100%;
 }
 
-
-.contact{
-    padding: 3rem 0;
-    margin: 4rem 0;
-    text-align: center;
+.contact {
+  padding: 3rem 0;
+  margin: 4rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  &__heading {
+    h1 {
+      @include section_heading;
+    }
+    h3 {
+      &::before {
+        @include beforeEl("04.");
+      }
+      color: $color-1;
+      font-size: 2rem;
+      font-family: monospace;
+    }
+  }
+  .summary {
+    max-width: 60%;
+    font-size: 1.7rem;
+    color: $slate-color-3;
+    font-weight: 400;
+    @include respond(phone2) {
+      font-size: 2rem;
+      max-width: 80%;
+    }
+  }
+  .cta {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    &__heading{
-        h3{
-            &::before{
-                @include beforeEl("04.")
-            }
-            color: $color-1;
-            font-size: 2rem;
-            font-family: monospace;
-        }
+
+    &:hover {
+      cursor: pointer;
     }
-    .summary{
-        font-size: 2.5rem;
-        color: $slate-color-2;
+
+    @include respond(phone2) {
+      flex-direction: column;
     }
-    .cta{
-       
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;
 
-        &:hover{
-            cursor:pointer;
-           
-        }
-       
-        @include respond(phone2){
-            flex-direction: column;
-        }
-
-      
-
-        .call-link{             
-            text-decoration: none;
-            color: $slate-color1;
-            @extend %hide;
-            .phone-icon{
-                font-size: 2rem;
-                color: $slate-color1;
-            }
-            .btn__visible, .btn__invisible{
-                @extend %switch;
-            }
-            .btn__invisible{
-                @extend %invisible;
-            }
-            &:hover .btn__invisible{
-                top: 0; 
-            }
-            &:hover .btn__visible{
-                transform: translateY(-100%);
-                
-            }
-             &:hover{
-                animation: pulse 1s infinite;
-            }
-        }
-
-
-        .email-link{
-            @extend %hide;
-            .btn__visible, .btn__invisible{
-                @extend %switch;
-            }
-            .btn__invisible{
-                @extend %invisible;
-            }
-            &:hover .btn__invisible{
-                top: 0;  
-            }
-             &:hover .btn__visible{
-               transform: translateY(-100%);
-               
-            }
-            &:hover{
-                animation: pulse 1s infinite;
-            }
-        }
+    .call-link {
+      text-decoration: none;
+      color: $slate-color1;
+      @extend %hide;
+      .phone-icon {
+        font-size: 2rem;
+        color: $slate-color1;
+      }
+      .btn__visible,
+      .btn__invisible {
+        @extend %switch;
+      }
+      .btn__invisible {
+        @extend %invisible;
+      }
+      &:hover .btn__invisible {
+        top: 0;
+      }
+      &:hover .btn__visible {
+        transform: translateY(-100%);
+      }
+      &:hover {
+        animation: pulse 1s infinite;
+      }
     }
-    
+
+    .email-link {
+      @extend %hide;
+      .btn__visible,
+      .btn__invisible {
+        @extend %switch;
+      }
+      .btn__invisible {
+        @extend %invisible;
+      }
+      &:hover .btn__invisible {
+        top: 0;
+      }
+      &:hover .btn__visible {
+        transform: translateY(-100%);
+      }
+      &:hover {
+        animation: pulse 1s infinite;
+      }
+    }
+  }
 }

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@200,300,400;500;600&family=Poppins:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 // $light-violet:hsl(270, 3%, 87%);
 // $greyish-violet:hsl(279, 6%, 55%);
 // $dark-violet:hsl(278, 52%, 57%);
@@ -46,7 +49,5 @@ $headingNum2: 3;
 $radius: 10px;
 
 //font variables
-$font-secondary: 'Fira Code', monospace;
-$font-primary:'Poppins', sans-serif;
-//// font-family: 'Fira Code', monospace;
-//font-family: 'Poppins', sans-serif;
+$font-secondary: "Fira Code", monospace;
+$font-primary: "Poppins", sans-serif;

@@ -1,132 +1,129 @@
-.exp{
-    height: auto;
-    max-width: 90rem;
-    // outline: 2px solid lightblue;
-    // outline: 2px solid white;    
-    padding:10rem 0 ;
-    margin: 0 auto ;
-
-    .h2b{
-        display: flex;
-        align-items: center;
-        position: relative;
-        &::before{
-           @include beforeEl("02.")
-        }
-        
-    }
-    &__inside{
-        // display: grid;
-        // grid-template-columns: repeat(auto-fit, min-max(40rem, 1fr));
-        // outline: 2px solid green;
-       display: flex;
-       flex-direction: row;
-       gap: 2rem;
-       
-        
-        @include respond(phone2){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .job-tabs{
-            text-align: left;
-            display: flex;
-            
-            width: 35.4rem;
-            border-left: .2px solid $slate-color-3;
-            height: max-content;
-            flex-direction: column;
-            align-items: start;
-            justify-content: flex-start;
-            // font-size: 2rem;
-            &::-webkit-scrollbar{
-                width: .2rem;
-                height: 1rem;
-            }
-            &::-webkit-scrollbar-thumb{
-                background: $slate-color-3;
-                border-radius: 1rem;
-                box-shadow: 0 -100vh 0 100vh $navy1;
-            }
-            
-            @include respond(phone2){
-                width: 100%;
-                display: flex;
-                overflow: scroll;
-                align-items: center;
-                flex-direction: row;
-                border-left: none;
-                border-bottom: 2px solid $slate-color-3;
-                @include glass;
-                gap: 2rem;
-
-            }
-            .button__tab{
-                font-size: 1.6rem;
-                font-weight: 500;
-                margin: 0;
-                width: 100%;
-                text-align: start;
-              
-                
-                // justify-self: stretch;
-                // transition: border .5s ease-in;
-                // transform-origin: top;
-                 &:focus{
-                    border-left: 2px solid $color-1;
-                    color:$color-1;
-                    @include respond(phone2){
-                        border-left: none;
-                       border-bottom: 2px solid $color-1; 
-                    }
-                }
-                 @include respond(phone2){
-                    text-align: center;
-                    font-size: 1.7rem;
-                    // height: 100%;
-                    width: max-content;
-                 }
-                &>span{
-                    // max-width: 100%;
-                    // width: 100%;
-                }
-            }
-        }
-        .job__description{
-       
-        padding: 1rem .5rem;
-        height: max-content;
-        width: 100%;
-        .h3{}
-        .duration{
-            font-family: $font-secondary;
-        }
-        .description-details>ul{
-            @include respond(phone2){
-            font-size: 2rem;
-         }
-        }
-        }
-    }
-}
-
-.works{
-    height: 50vh;
-    
+.exp {
+  height: auto;
+  max-width: 90rem;
+  // outline: 2px solid lightblue;
+  // outline: 2px solid white;
+  padding: 10rem 5rem;
+  margin: 0 auto;
+  @include respond(phone2) {
+    padding: 10rem 5rem;
+  }
+  @include respond(tab-port) {
     padding: 10rem 0;
+  }
+  .h2b {
+    @include section_heading;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::before {
+      @include beforeEl("02.");
+    }
+  }
+  &__inside {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, min-max(40rem, 1fr));
+    // outline: 2px solid green;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    @include respond(phone2) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .job-tabs {
+      text-align: left;
+      display: flex;
+
+      width: 35.4rem;
+      border-left: 0.2px solid $slate-color-3;
+      height: max-content;
+      flex-direction: column;
+      align-items: start;
+      justify-content: flex-start;
+      // font-size: 2rem;
+      &::-webkit-scrollbar {
+        width: 0.2rem;
+        height: 1rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $slate-color-3;
+        border-radius: 1rem;
+        box-shadow: 0 -100vh 0 100vh $navy1;
+      }
+
+      @include respond(phone2) {
+        width: 100%;
+        display: flex;
+        overflow: scroll;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        border-left: none;
+        border-bottom: 2px solid $slate-color-3;
+        @include glass;
+        gap: 2rem;
+      }
+      .button__tab {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+        width: 100%;
+        text-align: start;
+
+        // justify-self: stretch;
+        // transition: border .5s ease-in;
+        // transform-origin: top;
+        &:focus {
+          border-left: 2px solid $color-1;
+          color: $color-1;
+          @include respond(phone2) {
+            border-left: none;
+            border-bottom: 2px solid $color-1;
+          }
+        }
+        @include respond(phone2) {
+          text-align: center;
+          font-size: 1.7rem;
+          // height: 100%;
+          width: max-content;
+        }
+      }
+    }
+    .job__description {
+      padding: 0rem 0.5rem;
+      height: max-content;
+      width: 100%;
+      .h3 {
+      }
+      .duration {
+        font-family: $font-secondary;
+        font-weight: 200;
+      }
+      .description-details > ul {
+        font-size: 1.5rem;
+        font-weight: 400;
+        @include respond(phone2) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
 }
 
-.describe{
-    display: none;
-   
-   
+.works {
+  height: 50vh;
+
+  padding: 10rem 0;
 }
-.describe--active{
-   
-    display: block;
-    animation: appear .3s ease-in ;
-    // animation-iteration-count: 3;
-    
-   
+
+.describe {
+  display: none;
+}
+.describe--active {
+  display: block;
+  animation: appear 0.3s ease-in;
+  // animation-iteration-count: 3;
 }

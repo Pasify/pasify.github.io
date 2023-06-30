@@ -1,38 +1,43 @@
 @mixin flexxy {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
-@mixin trans2sec{
-    transition: all .2s ease;
+@mixin trans2sec {
+  transition: all 0.2s ease;
 }
-
+@mixin section_heading {
+  font-family: $font-primary;
+  font-weight: 600;
+}
 @mixin beforeEl($num) {
-    font-family:$font-secondary;
-    content:$num;
-    font-size: 2rem;
-    color: $color-1;
-    // position: absolute;
-     margin-right: 1rem;
-    
+  font-family: $font-secondary;
+  content: $num;
+  font-size: 2rem;
+  color: $color-1;
+  // position: absolute;
+  margin-right: 1rem;
 }
 @mixin afterEl {
-    content: "";
-    background-color: $color-1-light;
-    height: .1rem;
-    width: 30rem; 
-    display: inline-block;
-    // position: absolute;
-    top: 2.5rem;
-    left: 35rem;
-    
+  content: "";
+  background-color: $color-1-light;
+  height: 0.1rem;
+  width: 30rem;
+  display: inline-block;
+  // position: absolute;
+  top: 2.5rem;
+  left: 35rem;
 }
-@mixin glass{
-    // background:linear-gradient(135deg, darken($navy1, 1%),rgba(255,255,255,0));
-    background:linear-gradient(135deg, rgba(9, 5, 5, 0.2), rgba(255,255,255,0));
-    backdrop-filter: blur(45px);
-    -webkit-backdrop-filter: blur(45px);
-    box-shadow: $box-shadow;
-    border: 2px solid rgba(255,255,255,0.18); 
+@mixin glass {
+  // background:linear-gradient(135deg, darken($navy1, 1%),rgba(255,255,255,0));
+  background: linear-gradient(
+    135deg,
+    rgba(9, 5, 5, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(45px);
+  -webkit-backdrop-filter: blur(45px);
+  box-shadow: $box-shadow;
+  border: 2px solid rgba(255, 255, 255, 0.18);
 }
 /*
 
@@ -52,22 +57,30 @@ big-desktop
 1em =16px
 */
 @mixin respond($breakpoint) {
-    @if $breakpoint==phone {
-        @media only screen and (max-width: 25em){ @content;} //400px 
-    }
-    @if $breakpoint==phone2 {
-        @media only screen and (max-width: 37.5em){ @content;} //600px
-    }
-    @if $breakpoint==tab-port {
-        @media only screen and (max-width: 56.25em){ @content;} //900px
-    }
-    @if $breakpoint==desktop {
-     @media only screen and (max-width: 75em){ @content;} //1200px
-    }
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 25em) {
+      @content;
+    } //400px
+  }
+  @if $breakpoint==phone2 {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint==desktop {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
 
-    @if $breakpoint==big-desktop {
-     @media only screen and (min-width: 112.5em){ @content;} //1800px
-    }
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
 }
-
-

@@ -1,51 +1,46 @@
-.job__description{
-    h3{
-        text-transform: capitalize;
-        color: $slate-color-2;
-        font-size: 2rem;
-        margin-bottom: .5rem;
-        .company{
-        color: $color-1;
-        }
-        a{
-        text-decoration:none;
-        color: $color-1;
+.job__description {
+  h3 {
+    text-transform: capitalize;
+    color: $slate-color-2;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    .company {
+      color: $color-1;
+    }
+    a {
+      text-decoration: none;
+      color: $color-1;
+    }
+  }
+  .duration {
+    color: $slate-color-3;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+  }
+  .description-details {
+    ul {
+      // list-style: none;
+      color: $slate-color-3;
+      font-size: 1.8rem;
+      // list-style: none;
+      // outline: 2px solid red;
 
-        
+      li {
+        display: flex;
+        padding-bottom: 0.5rem;
+
+        &::before {
+          content: "▹";
+          color: $color-1;
+          font-size: 2rem;
+          gap: 2.5rem;
         }
-    }
-    .duration{
-        color: $slate-color-3;
-        font-size: 1.5rem;
-        text-transform: capitalize;
-        margin-bottom: .5rem;
-    }
-    .description-details{
-        
-        ul{
-            // list-style: none;
-            color: $slate-color-3;
-            font-size: 1.8rem;
-            // list-style: none;
-            // outline: 2px solid red;
-            
-            li{
-                display: flex;
-                padding-bottom: .5rem;  
-               
-                &::before{
-                content: "▹";
-                color: $color-1 ;
-                font-size:2rem;
-                gap: 2.5rem;
-                }
-                a{
-                    display: contents;
-                    color: $color-2;
-                }
-            }
+        a {
+          display: contents;
+          color: $color-2;
         }
+      }
     }
-    
+  }
 }
-    
