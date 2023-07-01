@@ -57,7 +57,7 @@
       @include respond(phone2) {
         width: 100%;
         display: flex;
-        overflow: scroll;
+        // overflow: scroll;
         align-items: center;
         justify-content: center;
         flex-direction: row;

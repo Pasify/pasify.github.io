@@ -1,8 +1,12 @@
-.footer{
-    font-family: $font-secondary;
-   
-    padding: 2rem 0;
-    color: $slate-color1;
-    text-align: center;
-    font-size: 1.3rem;
+.footer {
+  font-family: $font-secondary;
+
+  padding: 2rem 0;
+  color: $slate-color1;
+  text-align: center;
+  font-size: 1.5rem;
+  a {
+    color: $color-1;
+    text-decoration: none;
+  }
 }

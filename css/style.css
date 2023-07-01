@@ -595,7 +595,7 @@ main {
 }
 @media only screen and (max-width: 25em) {
   .header__name {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 }
 .header__sub {
@@ -628,7 +628,7 @@ main {
   font-size: 1.7rem;
   color: #8892b0;
   width: 65%;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
 }
 @media only screen and (max-width: 37.5em) {
@@ -638,7 +638,7 @@ main {
 }
 @media only screen and (max-width: 25em) {
   .header__description {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     width: 100%;
   }
 }
@@ -712,7 +712,6 @@ main {
   .exp__inside .job-tabs {
     width: 100%;
     display: flex;
-    overflow: scroll;
     align-items: center;
     justify-content: center;
     flex-direction: row;
@@ -1285,7 +1284,11 @@ main {
   padding: 2rem 0;
   color: #ccd6f6;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+}
+.footer a {
+  color: #f765e6;
+  text-decoration: none;
 }
 
 .about {
@@ -1347,7 +1350,7 @@ main {
   text-transform: capitalize;
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 .about__description .list__item {
   flex: 0 0 50%;

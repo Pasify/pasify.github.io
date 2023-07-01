@@ -138,7 +138,7 @@ const sectionObj = {
 };
 let sectionObserver = new IntersectionObserver(revealFunct, sectionObj);
 allSection.forEach((sections) => {
-  // sections.classList.add("section-hidden");
+  sections.classList.add("section-hidden");
   sectionObserver.observe(sections);
 });
 //////////////////////
