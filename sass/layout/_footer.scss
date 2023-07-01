@@ -5,8 +5,9 @@
   color: $slate-color1;
   text-align: center;
   font-size: 1.5rem;
-  span a {
+  .footer_link {
     color: $color-1;
     text-decoration: none;
+    -webkit-text-decoration: none;
   }
 }

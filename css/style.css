@@ -633,6 +633,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .header__description {
+    font-weight: 400;
     font-size: 2rem;
   }
 }
@@ -1286,9 +1287,10 @@ main {
   text-align: center;
   font-size: 1.5rem;
 }
-.footer span a {
+.footer .footer_link {
   color: #f765e6;
   text-decoration: none;
+  -webkit-text-decoration: none;
 }
 
 .about {
