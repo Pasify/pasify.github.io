@@ -76,3 +76,14 @@
   font-family: $font-primary;
   font-weight: 400;
 }
+.resume a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  .download_icon {
+    fill: currentColor;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}

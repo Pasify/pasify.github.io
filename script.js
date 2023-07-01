@@ -1,4 +1,5 @@
 "use strict";
+// import { click } from "@testing-library/user-event/dist/click.js";
 import { Projects } from "./projects.js";
 
 // selectors///////////
@@ -24,6 +25,8 @@ const messageOverlay = document.querySelector(".message-overlay");
 /////////////
 const allSection = document.querySelectorAll(".section");
 
+const ul = document.querySelector(".project__sub__container");
+const li = ul.querySelector(".project_list");
 /////FUNCTIONALITY
 /////scroll bar functionality ///////
 const disableScroll = function () {
@@ -140,14 +143,16 @@ allSection.forEach((sections) => {
 });
 //////////////////////
 
-console.log(document.body);
+// console.log(document.body);
 // document.body.style.overflowY = "hidden";
 
 // show more functionality /////////
 const projectMapped = Projects.map(function (project) {
   return `
-      <li>
-                        <div class="project1 project">
+      <li class=""project_list>
+                        <div class="project1 project" data-url="${
+                          project.projectLink
+                        }">
                             <div class="icon-container">
                                 <div class="project-folder">
                                     <svg class="file-icon">
@@ -230,4 +235,17 @@ showMoreBtn.addEventListener("click", function () {
     enableScroll();
   });
 });
+
+// project sub links
+ul.addEventListener("click", function (e) {
+  let clickedElement = e.target.closest(".project");
+
+  if (clickedElement) {
+    let url = clickedElement.getAttribute("data-url");
+    // window.location.href = url;
+    window.open(url, "_blank");
+  }
+  // let url = e.target.querySelector("");
+});
+
 //////////////////////

@@ -226,6 +226,18 @@ main {
   font-weight: 400;
 }
 
+.resume a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.resume a .download_icon {
+  fill: currentColor;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 .btn, .btn:link {
   font-family: "Fira Code", monospace;
   background-color: transparent;
@@ -1190,6 +1202,7 @@ main {
 .project_sub .project__sub__container li {
   list-style: none;
   transition: all 0.2s ease-in;
+  cursor: pointer;
 }
 .project_sub .project__sub__container li:hover {
   transform: translateY(-10px);
