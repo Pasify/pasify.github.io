@@ -1286,7 +1286,7 @@ main {
   text-align: center;
   font-size: 1.5rem;
 }
-.footer a {
+.footer span a {
   color: #f765e6;
   text-decoration: none;
 }
