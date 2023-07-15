@@ -239,7 +239,7 @@ showMoreBtn.addEventListener("click", function () {
       message.querySelector(
         ".message__content"
       ).textContent = `Oops!, That's all the project I have for now.
-            More projects coming soon!😉`;
+            More projects coming soon!👨🏼‍💻😉`;
       message.classList.remove("hidemessage");
       messageOverlay.classList.remove("hideoverlay");
       disableScroll();
