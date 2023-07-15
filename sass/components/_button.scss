@@ -72,8 +72,7 @@
   }
 }
 .show_more {
+  outline: none;
+  text-decoration: underline;
   width: 30%;
-  @include respond(phone2) {
-    justify-self: center;
-  }
 }

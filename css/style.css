@@ -299,12 +299,9 @@ main {
 }
 
 .show_more {
+  outline: none;
+  text-decoration: underline;
   width: 30%;
-}
-@media only screen and (max-width: 37.5em) {
-  .show_more {
-    justify-self: center;
-  }
 }
 
 .job__description h3 {
