@@ -6,7 +6,7 @@
 // $dark-violet:hsl(278, 52%, 57%);
 // $dark-violet:hsl(278, 97%, 43%);
 
-$white-color: hsl(0, 0%, 100%);
+$white-color: #ffffff;
 $black-color: #020c1b;
 $black-color-1: #0a192f;
 
@@ -17,12 +17,23 @@ $card-color: #112240;
 // $color-1:#deacf5;
 // $color-1:#dd57ff;
 // $color-1:#f540e9;
-// $color-1:#3ef69a;
-$color-1: #f765e6;
 
-$color-2: #9754cb;
-$color-3: #6237a0;
-$color-4: #28104e;
+// $color-6:#087793;
+// $color: #001214;
+// $color4: #fafeff;
+// $color5: #00e1ff;
+// $color6: #cdf8fe;
+// $color7: #05ddfa;
+
+$color-1: #00e1ff;
+$color-2: #69ebfc;
+$color-3: #05ddfa;
+$color-4: #014149;
+
+// $color-1: #f765e6;
+// $color-2: hsl(274, 53%, 56%);
+// $color-3: #6237a0;
+// $color-4: #28104e;
 
 // font colors
 $slate-color-3: #8892b0;
@@ -37,7 +48,7 @@ $navy1: rgb(10, 25, 47);
 $black-color2: rgb(19, 15, 22);
 
 // lighter-variation
-$color-1-light: rgba(222, 172, 245, 0.25);
+$color-1-light: #ddabf540;
 
 $shadow: rgba(16, 44, 87, 0.7);
 $box-shadow: 0 10px 30px -15px $shadow;

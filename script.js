@@ -10,6 +10,9 @@ const findOutBtn = document.querySelector("#findOut");
 const headerSection = document.querySelector("#header");
 const nav = document.querySelector(".nav");
 const overlay = document.querySelector(".overlay");
+const aboutDescription = document.querySelector(".about__description");
+const showMoreButton = document.querySelector(".show_more");
+const moredetailsContainer = document.querySelector(".more_details");
 
 //tabbed component
 const tabs = document.querySelectorAll(".button__tab");
@@ -104,7 +107,23 @@ findOutBtn.addEventListener("click", function () {
   });
 });
 ////////////////////////
-
+///////show more details functionaliy/////
+let show = true;
+moredetailsContainer.style.display = "none";
+const toggleShow = function () {
+  if (show === true) {
+    moredetailsContainer.style.display = "block";
+    // showMoreButton.textContent = "show less";
+    showMoreButton.style.display = "none";
+    show = false;
+  } else {
+    moredetailsContainer.style.display = "none";
+    showMoreButton.textContent = `Show more`;
+    show = true;
+  }
+};
+showMoreButton.addEventListener("click", toggleShow);
+////////////////////////
 //navbar and overlay bar function on phone2
 //add event handler to each of the buttons in the tab by using event delegation, i.e targeting the parent element
 //tabbed component

@@ -125,15 +125,15 @@ main {
 }
 @keyframes dotted {
   from {
-    outline: 1px dotted #f765e6;
+    outline: 1px dotted #00e1ff;
   }
   to {
-    outline: 3px dotted #f765e6;
+    outline: 3px dotted #00e1ff;
   }
 }
 .heading {
   font-size: 3rem;
-  color: hsl(0, 0%, 100%);
+  color: #ffffff;
   font-weight: 400;
   text-transform: none;
 }
@@ -241,15 +241,15 @@ main {
 .btn, .btn:link {
   font-family: "Fira Code", monospace;
   background-color: transparent;
-  color: #f765e6;
-  outline: 2px solid rgba(247, 101, 230, 0.5);
+  color: #00e1ff;
+  outline: 2px solid rgba(0, 225, 255, 0.5);
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 .btn:hover {
-  background-color: rgba(222, 172, 245, 0.25);
+  background-color: #014149;
   transform: translateY(-0.5rem);
   box-shadow: 0px 0.4rem 1rem 0px rgba(61, 54, 67, 0.375);
   color: #ccd6f6;
@@ -292,10 +292,19 @@ main {
   }
 }
 .button:hover, .button:active {
-  color: #f765e6;
+  color: #00e1ff;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #233554 50%);
   background-size: 250%;
   background-position: 100%;
+}
+
+.show_more {
+  width: 30%;
+}
+@media only screen and (max-width: 37.5em) {
+  .show_more {
+    justify-self: center;
+  }
 }
 
 .job__description h3 {
@@ -305,11 +314,11 @@ main {
   margin-bottom: 0.5rem;
 }
 .job__description h3 .company {
-  color: #f765e6;
+  color: #00e1ff;
 }
 .job__description h3 a {
   text-decoration: none;
-  color: #f765e6;
+  color: #00e1ff;
 }
 .job__description .duration {
   color: #8892b0;
@@ -327,13 +336,13 @@ main {
 }
 .job__description .description-details ul li::before {
   content: "▹";
-  color: #f765e6;
+  color: #00e1ff;
   font-size: 2rem;
   gap: 2.5rem;
 }
 .job__description .description-details ul li a {
   display: contents;
-  color: #9754cb;
+  color: #69ebfc;
 }
 
 .nav {
@@ -376,7 +385,7 @@ main {
     transition: all 0.3s ease;
   }
   .nav__icon, .nav__icon::before, .nav__icon::after {
-    background-color: #f765e6;
+    background-color: #00e1ff;
     display: inline-block;
   }
   .nav__icon::before, .nav__icon::after {
@@ -475,7 +484,7 @@ main {
 }
 .nav__item--num {
   text-transform: none;
-  color: #f765e6;
+  color: #00e1ff;
 }
 .nav__item:hover {
   transform: scale(1.1, 1.1);
@@ -498,7 +507,7 @@ main {
   text-decoration: none;
 }
 .nav__link:hover {
-  color: #f765e6;
+  color: #00e1ff;
 }
 @media only screen and (max-width: 37.5em) {
   .nav__link {
@@ -562,7 +571,7 @@ main {
 .header__hi {
   font-size: 2.5rem;
   font-weight: 200;
-  color: #f765e6;
+  color: #00e1ff;
   font-family: "Fira Code", monospace;
 }
 @media only screen and (max-width: 25em) {
@@ -675,7 +684,7 @@ main {
   font-family: "Fira Code", monospace;
   content: "02.";
   font-size: 2rem;
-  color: #f765e6;
+  color: #00e1ff;
   margin-right: 1rem;
 }
 .exp__inside {
@@ -734,13 +743,13 @@ main {
   text-align: start;
 }
 .exp__inside .job-tabs .button__tab:focus {
-  border-left: 2px solid #f765e6;
-  color: #f765e6;
+  border-left: 2px solid #00e1ff;
+  color: #00e1ff;
 }
 @media only screen and (max-width: 37.5em) {
   .exp__inside .job-tabs .button__tab:focus {
     border-left: none;
-    border-bottom: 2px solid #f765e6;
+    border-bottom: 2px solid #00e1ff;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -789,6 +798,9 @@ main {
   justify-content: end;
   fill: #ccd6f6;
 }
+.works .project__container .project__content .tools .icon-link:hover, .works .project__container .project__content .tools .git-link:hover {
+  fill: #00e1ff;
+}
 
 .works {
   height: auto;
@@ -804,7 +816,7 @@ main {
   font-family: "Fira Code", monospace;
   content: "03.";
   font-size: 2rem;
-  color: #f765e6;
+  color: #00e1ff;
   margin-right: 1rem;
 }
 .works .project__lists {
@@ -852,7 +864,7 @@ main {
   text-decoration: none;
 }
 .works .project__container .project__content .project-title > a:hover {
-  color: #f765e6;
+  color: #00e1ff;
 }
 .works .project__container .project__content .project__description {
   background: linear-gradient(135deg, #09172b, rgba(255, 255, 255, 0));
@@ -997,7 +1009,7 @@ main {
   }
 }
 .social__contacts .icon__container .icon:hover {
-  fill: #f765e6;
+  fill: #00e1ff;
   transform: scale(1.5, 1.5) translateY(-3px);
   height: 2rem;
 }
@@ -1060,11 +1072,11 @@ main {
   align-items: center;
 }
 .gmail__container .gmail__address > a:active, .gmail__container .gmail__address > a:visited {
-  color: #f765e6;
+  color: #00e1ff;
 }
 .gmail__container .gmail__address > a:hover {
   cursor: pointer;
-  color: #f765e6;
+  color: #00e1ff;
   transform: scale(1.2);
 }
 
@@ -1106,7 +1118,7 @@ main {
   font-weight: 600;
 }
 .contact__heading h3 {
-  color: #f765e6;
+  color: #00e1ff;
   font-size: 2rem;
   font-family: monospace;
 }
@@ -1114,7 +1126,7 @@ main {
   font-family: "Fira Code", monospace;
   content: "04.";
   font-size: 2rem;
-  color: #f765e6;
+  color: #00e1ff;
   margin-right: 1rem;
 }
 .contact .summary {
@@ -1208,7 +1220,7 @@ main {
   transform: translateY(-10px);
 }
 .project_sub .project__sub__container li:hover > .project .heading {
-  color: #f765e6;
+  color: #00e1ff;
 }
 .project_sub .project__sub__container .project {
   display: flex;
@@ -1233,7 +1245,7 @@ main {
   gap: 2.5rem;
 }
 .project_sub .project__sub__container .project .icon-container .file-icon {
-  fill: #f765e6;
+  fill: #00e1ff;
   height: 3.5rem;
   width: 3.5rem;
 }
@@ -1243,7 +1255,7 @@ main {
   width: 2.3rem;
 }
 .project_sub .project__sub__container .project .icon-container .link-icon:is(:hover) {
-  fill: #f765e6;
+  fill: #00e1ff;
 }
 .project_sub .project__sub__container .project .project__details .heading {
   color: #ccd6f6;
@@ -1288,7 +1300,7 @@ main {
   font-size: 1.5rem;
 }
 .footer .footer_link {
-  color: #f765e6;
+  color: #00e1ff;
   text-decoration: none;
   -webkit-text-decoration: none;
 }
@@ -1310,7 +1322,7 @@ main {
   font-family: "Fira Code", monospace;
   content: "01.";
   font-size: 2rem;
-  color: #f765e6;
+  color: #00e1ff;
   margin-right: 1rem;
 }
 .about__container {
@@ -1328,7 +1340,7 @@ main {
   color: #8892b0;
   display: grid;
   grid-template-rows: repeat(4, max-content);
-  row-gap: 1.5rem;
+  row-gap: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   .about__description {
@@ -1359,7 +1371,7 @@ main {
 }
 .about__description .list__item::before {
   content: "▹";
-  color: #f765e6;
+  color: #00e1ff;
   font-size: 2rem;
   margin: 1rem;
 }
@@ -1367,14 +1379,14 @@ main {
   position: relative;
   height: 35rem;
   width: 25rem;
-  background-image: linear-gradient(to right, rgba(151, 84, 203, 0.3), rgba(98, 55, 160, 0.3)), url(../../images/fullshot.JPG);
+  background-image: linear-gradient(to right, rgba(105, 235, 252, 0.3), rgba(5, 221, 250, 0.3)), url(../../images/fullshot.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.2s ease;
   background-position: center;
   justify-self: center;
   border-radius: 5px;
-  outline: 2px solid #f765e6;
+  outline: 2px solid #00e1ff;
 }
 @media only screen and (max-width: 25em) {
   .about__img-div {
@@ -1385,14 +1397,14 @@ main {
   content: "";
   width: 100%;
   height: 100%;
-  outline: 2px solid #f765e6;
+  outline: 2px solid #00e1ff;
   position: absolute;
   top: 2.5rem;
   left: 3rem;
   z-index: -1;
   transition: all 0.2s ease-in-out;
   border-radius: 5px;
-  background-color: #28104e;
+  background-color: #014149;
 }
 .about__img-div:hover {
   background-image: linear-gradient(to right, transparent, transparent), url(../../images/fullshot.JPG);

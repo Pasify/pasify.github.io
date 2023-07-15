@@ -5,7 +5,7 @@ const Projects = [
     projectTitle: "Belsa App",
     projectDescription:
       "A booking website with a sleek and responsive layout. Experience stunning design, intuitive interface, and engaging user experience in browsing and booking hotels, cars, fight and others.",
-    projectTools: ["ReactJs", "CSS/Sass"],
+    projectTools: ["HTML", "CSS/Sass"],
   },
   {
     githubLink: "https://github.com/Pasify/dicedash",
@@ -13,7 +13,7 @@ const Projects = [
     projectTitle: "Dice-Dash",
     projectDescription:
       "A simple dice game where players roll the dice, accumulate points, and aim to reach a target score. But watch out for rolling a '1'! Take turns, make strategic decisions, and be the first to reach the goal",
-    projectTools: ["ReactJs", "CSS/Sass", "JavaScript"],
+    projectTools: ["HTML", "CSS/Sass", "JavaScript"],
   },
   {
     githubLink: "https://github.com/Pasify/Bankist-App",
@@ -26,7 +26,7 @@ const Projects = [
   },
   {
     githubLink: "https://github.com/Pasify/Far-Away",
-    projectLink: "",
+    projectLink: "https://github.com/Pasify/Far-Away",
     projectTitle: "Far Away",
     projectDescription:
       "A travel checklist app built using the Vite development environment and React. It allows you to create a list of items you need to pack for your travels.",

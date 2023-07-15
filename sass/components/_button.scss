@@ -1,69 +1,79 @@
-.btn{
-    
-    &,&:link{
+.btn {
+  &,
+  &:link {
     font-family: $font-secondary;
     background-color: transparent;
-    // border: 2px solid rgba(255,255,255,0.18); 
+    // border: 2px solid rgba(255,255,255,0.18);
     color: $color-1;
-    outline: 2px solid  rgba($color-1, 0.5);
-    border-radius: .5rem;
+    outline: 2px solid rgba($color-1, 0.5);
+    border-radius: 0.5rem;
     border: none;
     // text-transform: capitalize;
     cursor: pointer;
-    transition: all .2s ease;
-    }
-    
-    
-    &:hover{
-        background-color: $color-1-light;
-        transform: translateY(-.5rem);
-        box-shadow: 0px 0.4rem 1rem 0px rgba(61, 54, 67, 0.375);
-        color: $slate-color-2;
-    }
-    &:active{
-        transform: translateY(0);
-        box-shadow: 0px 0.2rem 1rem 0px rgb(19, 15, 22);
-    }
-    &-big{
+    transition: all 0.2s ease;
+  }
+
+  &:hover {
+    background-color: $color-4;
+    transform: translateY(-0.5rem);
+    box-shadow: 0px 0.4rem 1rem 0px rgba(61, 54, 67, 0.375);
+    color: $slate-color-2;
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0px 0.2rem 1rem 0px rgb(19, 15, 22);
+  }
+  &-big {
     // padding: 2rem 3rem;
     width: 20rem;
     height: 5rem;
     font-size: 2rem;
-    }
-    &-small{
-    padding: .7rem 1rem;}
+  }
+  &-small {
+    padding: 0.7rem 1rem;
+  }
 }
 
-.button{
-    font-family: $font-secondary;
-    &,&:link,&:visited{
-        font-size: 1.2rem;
-        padding: 1rem 2rem;
-        color: $slate-color-3;
-        outline: none;
-        cursor: pointer;
-        border: none;
-        background-color: transparent;
-        transition: all .3s ease-in;
-        transform-origin: bottom;
-        text-transform: capitalize;
-        width:max-content;
-        display: flex;
-        justify-content: flex-start;
-        align-self: center;
-        @include respond(phone){
-            padding:1rem
-        }
+.button {
+  font-family: $font-secondary;
+  &,
+  &:link,
+  &:visited {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    color: $slate-color-3;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s ease-in;
+    transform-origin: bottom;
+    text-transform: capitalize;
+    width: max-content;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    @include respond(phone) {
+      padding: 1rem;
     }
-    &:hover,&:active{
-        color: $color-1;
-        background-image: linear-gradient(120deg,
-        transparent 0%,
-        transparent 50%, 
-        $navy-blue 50%);
-        background-size: 250%;
-        background-position: 100%;
-        // border-left: 2px solid $color-1;
-    }
-   
+  }
+  &:hover,
+  &:active {
+    color: $color-1;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      $navy-blue 50%
+    );
+    background-size: 250%;
+    background-position: 100%;
+    // border-left: 2px solid $color-1;
+  }
+}
+.show_more {
+  width: 30%;
+  @include respond(phone2) {
+    justify-self: center;
+  }
 }
