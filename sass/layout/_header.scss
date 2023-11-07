@@ -73,7 +73,7 @@
       font-size: 5.7rem;
     }
     @include respond(phone) {
-      font-size: 6rem;
+      // font-size: 6rem;
     }
   }
   &__sub {
@@ -105,10 +105,10 @@
     @include respond(phone2) {
       font-weight: 400;
       font-size: 2rem;
+      width: 100%;
     }
     @include respond(phone) {
       font-size: 2.3rem;
-      width: 100%;
     }
     //   @include respond(phone){
     //     font-size: 3rem;

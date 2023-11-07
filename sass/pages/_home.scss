@@ -79,7 +79,7 @@
         rgba($color-2, 30%),
         rgba($color-3, 30%)
       ),
-      url(../../images/fullshot.JPG);
+      url(../../images/profile-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 0.2s ease;
@@ -107,7 +107,7 @@
 
     &:hover {
       background-image: linear-gradient(to right, transparent, transparent),
-        url(../../images/fullshot.JPG);
+        url(../../images/profile-image.jpg);
       &::after {
         top: 1.5rem;
         left: 2rem;

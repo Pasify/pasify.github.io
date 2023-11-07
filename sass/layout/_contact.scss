@@ -16,6 +16,10 @@
   left: 0;
   top: -100%;
 }
+.contactIcon {
+  height: 2.5rem;
+  fill: $white-color;
+}
 
 .contact {
   padding: 3rem 0;
@@ -77,6 +81,9 @@
       }
       .btn__invisible {
         @extend %invisible;
+        .icon {
+          @extend .contactIcon;
+        }
       }
       &:hover .btn__invisible {
         top: 0;
@@ -97,6 +104,9 @@
       }
       .btn__invisible {
         @extend %invisible;
+        .icon {
+          @extend .contactIcon;
+        }
       }
       &:hover .btn__invisible {
         top: 0;
